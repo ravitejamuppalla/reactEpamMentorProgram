@@ -1,0 +1,36 @@
+.Header_Section {
+  width: 130rem;
+  background-color: #232323;
+  background-image: linear-gradient(to right bottom, #020202f5, #131313d4),
+    url("../../support/backgroundImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  /* position: absolute;
+  left: 10%; */
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+.HeaderIcon {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.HeaderIcon h1 {
+  color: #f65261;
+  font-size: 22px;
+  font-weight: 600;
+}
+.HeaderIcon h1 span {
+  font-weight: normal;
+}
+.AddMovie {
+  background-color: transparent;
+  color: #f65261;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #555555;
+  padding: 10px;
+}

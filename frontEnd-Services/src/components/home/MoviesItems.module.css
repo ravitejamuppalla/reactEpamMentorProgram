@@ -1,0 +1,34 @@
+.MovieItemCard {
+  width: 280px;
+  cursor: pointer;
+}
+
+.MovieItemCard img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+.MovieDetails {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+.movieTitle {
+  /* flex-grow: 1; */
+  width: 200px;
+  font-size: 18px;
+}
+.movieYear {
+  font-size: 20px;
+  /* border: 1px solid #aaa; */
+  padding: 5px;
+  background: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.movieGenercDetails {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 16px;
+}

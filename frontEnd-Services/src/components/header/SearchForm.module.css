@@ -1,0 +1,31 @@
+.Search_Section {
+  margin-left: 10rem;
+}
+.Search_Section h1 {
+  font-size: 42px;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.input_Section {
+  display: flex;
+  gap: 20px;
+}
+.Search_Section input {
+  width: 50%;
+  padding: 15px;
+  background-color: #232323;
+  font-size: 20px;
+  color: #ffffff;
+  outline: none;
+}
+.Search_Section button {
+  padding: 10px;
+  background-color: #f65261;
+  border: none;
+  border-radius: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
