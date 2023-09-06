@@ -1,4 +1,4 @@
-import { React, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 function useHttp() {
   const [isLoading, setLoading] = useState(false);
   const [iserror, setError] = useState(null);
@@ -23,7 +23,6 @@ function useHttp() {
     } catch (error) {
       setError(error.message || "Something went Wrong");
       requestData(null);
-      // requestData({});
     }
     setLoading(false);
   }, []);

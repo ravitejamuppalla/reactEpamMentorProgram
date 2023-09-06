@@ -1,14 +1,13 @@
 import React, { useState, createElement, Component } from "react";
 import classes from "./Counter.module.css";
+import AppConstants from "../AppConstants";
 
 class CounterSection extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       count: 0,
     };
-    this.onIncrementHandler = this.onIncrementHandler.bind(this);
-    this.onDecrementHandler = this.onDecrementHandler.bind(this);
   }
   onIncrementHandler() {
     this.setState((prevState) => {
@@ -32,17 +31,17 @@ class CounterSection extends Component {
         "button",
         {
           className: classes.buttonCounter,
-          onClick: this.onIncrementHandler,
+          onClick: this.onIncrementHandler.bind(this),
         },
-        "Increment"
+        AppConstants.INCREAMNET
       ),
       createElement(
         "button",
         {
           className: classes.buttonCounter,
-          onClick: this.onDecrementHandler,
+          onClick: this.onDecrementHandler.bind(this),
         },
-        "Decrement"
+        AppConstants.DECREMENT
       )
     );
   }

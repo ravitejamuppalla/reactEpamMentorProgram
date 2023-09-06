@@ -1,8 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
 import classes from "./Header.module.css";
 import SearchForm from "./SearchForm";
+import APP_CONSTANTS from "../../AppConstants";
 
 function Header(props) {
+  let { searchTextData, defaultSearch } = props;
+
   return (
     <Fragment>
       <div className={classes.Header_Section}>
@@ -10,12 +13,14 @@ function Header(props) {
           <h1>
             netflix<span>roulette</span>
           </h1>
-          <button className={classes.AddMovie}> + Add Movie</button>
+          <button className={classes.AddMovie}>
+            + {APP_CONSTANTS.ADDMOVIE}
+          </button>
         </div>
         <div>
           <SearchForm
-            searchTextData={props.searchTextData}
-            defaultSearch={props.defaultSearch}
+            searchTextData={searchTextData}
+            defaultSearch={defaultSearch}
           ></SearchForm>
         </div>
       </div>
