@@ -25,7 +25,11 @@ class CounterSection extends Component {
       "main",
       { className: classes.counter },
       createElement("h1", null, "Counter"),
-      createElement("div", { className: classes.value }, this.state.count),
+      createElement(
+        "div",
+        { className: classes.value, id: "counterCount" },
+        this.state.count
+      ),
 
       createElement(
         "button",

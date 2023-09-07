@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Movies.module.css";
+import SortControl from "./SortControl";
 
 function GenercMoviesSelect(props) {
   const [isActive, setIsActive] = useState("All");
@@ -44,6 +45,7 @@ function GenercMoviesSelect(props) {
             Crime
           </button>
         </div>
+        <SortControl></SortControl>
       </div>
     </>
   );

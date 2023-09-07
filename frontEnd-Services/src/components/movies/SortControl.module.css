@@ -1,0 +1,22 @@
+.sortBy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sortBy label {
+  font-size: 20px;
+  color: #858484;
+  text-transform: uppercase;
+}
+.sortBy select {
+  font-size: 20px;
+  background-color: transparent;
+  color: #f65261;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+.sortBy select option {
+  background-color: #858484;
+}

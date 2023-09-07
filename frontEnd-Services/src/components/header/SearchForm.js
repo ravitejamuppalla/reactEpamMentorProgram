@@ -16,6 +16,11 @@ function SearchForm(props) {
             placeholder="What do you want to watch?"
             ref={searchInput}
             defaultValue={defaultSearch}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                getInputHandler();
+              }
+            }}
           ></input>
           <button onClick={getInputHandler}>Search</button>
         </div>

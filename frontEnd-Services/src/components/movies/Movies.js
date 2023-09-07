@@ -3,6 +3,7 @@ import classes from "./Movies.module.css";
 import Loader from "../../utils/Loader";
 import MoviesItems from "./MoviesItems";
 import GenercMoviesSelect from "./GenercMoviesSelect";
+import SortControl from "./SortControl";
 
 function Movies(props) {
   let { error, loading, moviesData, onSelect } = props;
@@ -14,7 +15,9 @@ function Movies(props) {
   return (
     <>
       <div className={classes.MoviesDetails}>
-        <GenercMoviesSelect onSelect={onSelect}></GenercMoviesSelect>
+        <div>
+          <GenercMoviesSelect onSelect={onSelect}></GenercMoviesSelect>
+        </div>
         <div className={classes.MovieContainer}>
           {error && (
             <div className={classes.centerTheText}>
