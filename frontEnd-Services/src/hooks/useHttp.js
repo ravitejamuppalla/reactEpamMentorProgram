@@ -21,7 +21,7 @@ function useHttp() {
 
       requestData(response);
     } catch (error) {
-      setError(error.message || "Something went Wrong");
+      setError(null);
       requestData(null);
     }
     setLoading(false);

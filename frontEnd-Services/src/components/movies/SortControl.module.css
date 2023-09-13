@@ -18,5 +18,6 @@
   outline: none;
 }
 .sortBy select option {
-  background-color: #858484;
+  background-color: #232323;
+  border: none;
 }

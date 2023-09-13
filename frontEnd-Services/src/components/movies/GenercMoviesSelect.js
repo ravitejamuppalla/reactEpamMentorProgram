@@ -8,6 +8,9 @@ function GenercMoviesSelect(props) {
     props.onSelect(event.target.textContent);
     setIsActive(event.target.textContent);
   }
+  function sortByHandler(data) {
+    props.SortControlData(data);
+  }
   return (
     <>
       <div className={classes.MoviesGenercSelector}>
@@ -45,7 +48,10 @@ function GenercMoviesSelect(props) {
             Crime
           </button>
         </div>
-        <SortControl></SortControl>
+        <SortControl
+          SortControl={sortByHandler}
+          defaultFilter={props.sortByDefault}
+        ></SortControl>
       </div>
     </>
   );

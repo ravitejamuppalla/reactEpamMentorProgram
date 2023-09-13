@@ -2,9 +2,14 @@ import React, { Fragment, useEffect, useState } from "react";
 import classes from "./Header.module.css";
 import SearchForm from "./SearchForm";
 import APP_CONSTANTS from "../../AppConstants";
+import MovieAddEdit from "../movies/MovieAddEdit";
 
 function Header(props) {
   let { searchTextData, defaultSearch } = props;
+  const [openMoviePop, setOpenMoviePop] = useState(false);
+  function openMovieHandler(params) {
+    setOpenMoviePop((values) => !values);
+  }
 
   return (
     <Fragment>
@@ -13,7 +18,7 @@ function Header(props) {
           <h1>
             netflix<span>roulette</span>
           </h1>
-          <button className={classes.AddMovie}>
+          <button className={classes.AddMovie} onClick={openMovieHandler}>
             + {APP_CONSTANTS.ADDMOVIE}
           </button>
         </div>
@@ -23,6 +28,13 @@ function Header(props) {
             defaultSearch={defaultSearch}
           ></SearchForm>
         </div>
+        {openMoviePop && (
+          <MovieAddEdit
+            name="Add"
+            buttonName="Submit"
+            closeAddEditMovie={openMovieHandler}
+          ></MovieAddEdit>
+        )}
       </div>
     </Fragment>
   );
