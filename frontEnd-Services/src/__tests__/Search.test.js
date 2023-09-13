@@ -4,7 +4,7 @@ import SearchForm from "../components/header/SearchForm";
 import userEvent from "@testing-library/user-event";
 
 describe("Counter Test Validation", () => {
-  it("Test that a click event on decrement button decrements the displayed value", () => {
+  it("Test that a click event on decrement button decrements the displayed value", async () => {
     const searchInPutHandler = jest.fn();
 
     render(
@@ -19,13 +19,14 @@ describe("Counter Test Validation", () => {
     userEvent.type(searchButtonTextBox, "Avengers");
     expect(searchButtonTextBox).toBeTruthy();
     expect(searchButtonTextBox.value).toBe("Avengers");
-    userEvent.click(
+    await userEvent.click(
       screen.getByRole("button", {
         name: /search/i,
       })
     );
     expect(searchInPutHandler).toHaveBeenCalled();
-    // userEvent.type(searchButtonTextBox, "Avengers{enter}");
-    // expect(searchButtonTextBox.value).toBe("Avengers");
+    userEvent.type(searchButtonTextBox, "Avengers{enter}");
+    expect(searchButtonTextBox.value).toBe("Avengers");
+    expect(searchInPutHandler).toHaveBeenCalled();
   });
 });

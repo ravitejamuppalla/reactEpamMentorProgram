@@ -8,7 +8,6 @@ import React, {
 import Modal from "../../UI/Modal";
 import classes from "./MovieAddEdit.module.css";
 import Select from "react-select";
-import { parse } from "@storybook/blocks";
 import useHttp from "../../hooks/useHttp";
 import UseInput from "../../hooks/use-Input";
 import { AiOutlineCaretDown } from "react-icons/ai";
