@@ -1,0 +1,80 @@
+.movieDeletePopup {
+  height: 300px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.movieDeletePopup {
+  position: relative;
+}
+.movieDeletePopup h1 {
+  font-size: 44px;
+}
+.movieDeletePopup p {
+  font-size: 18px;
+}
+.confirmButton {
+  position: absolute;
+  right: 20%;
+  top: 60%;
+  margin-top: 10px;
+}
+.confirmButton button {
+  font-size: 20px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background-color: #f65261;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.close {
+  color: #ffffff;
+  font-size: 64px;
+  cursor: pointer;
+}
+.DeleteMovieHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.centerTheText {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.errorFailure {
+  color: #ffffff;
+  font-size: 24px;
+}
+.moveToRight {
+  text-align: right;
+}
+.sucessMessageIcon {
+  font-size: 52px;
+  color: #f65261;
+  text-align: center;
+}
+.sucessData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.sucessData p {
+  font-size: 22px;
+}
+
+.movieDeleteFinalPopup {
+  height: 200px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

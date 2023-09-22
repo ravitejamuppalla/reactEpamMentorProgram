@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* position: relative; */
+}
+html {
+  background-color: #555555;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}

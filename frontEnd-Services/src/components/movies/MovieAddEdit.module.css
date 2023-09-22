@@ -1,0 +1,307 @@
+.MovieAddEdit h1 {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.MovieAddEdit {
+  padding: 40px;
+  overflow: auto;
+  height: 600px;
+}
+.movieForm {
+  color: #ffffff;
+  margin-top: 30px;
+}
+.formScrollBar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+  column-gap: 30px;
+}
+label {
+  display: block;
+}
+.close {
+  color: #ffffff;
+  font-size: 52px;
+}
+.movieHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.formSomeOfFields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+}
+textarea {
+  width: 100%;
+  color: #ffffff;
+  background-color: #323232f2;
+  font-size: 22px;
+  outline: none;
+  min-height: 100px;
+}
+.textarea label {
+  padding-top: 20px;
+}
+.movieForm {
+}
+.movieForm input {
+  width: 250px;
+  font-size: 22px;
+  outline: none;
+  border-radius: 2px;
+  padding: 5px;
+  background-color: #323232f2;
+  color: #ffffff;
+}
+.movieForm label {
+  color: #f65261;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.genereSelect {
+  font-size: 10px;
+}
+
+.custom-inpt {
+  padding: 10px !important;
+}
+#releaseDate {
+  position: relative;
+}
+
+#releaseDate:before {
+  color: #b68644;
+  background: none;
+  display: block;
+  font-family: "FontAwesome";
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  content: "\f073";
+}
+
+input[type="”date”"] {
+  background-color: #fff;
+  color: #000;
+  width: 30% !important;
+}
+.movieDropdown {
+  color: #ffffff;
+  background-color: #323232f2;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  width: 250px;
+  outline: none;
+}
+.buttonsforSubmit {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.buttonsforSubmit button {
+  padding: 10px 30px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #f65261;
+  color: #f65261;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.buttonsforSubmit button:last-child {
+  background-color: #f65261;
+  color: #ffffff;
+}
+.errorHandling {
+  color: red;
+}
+#inputcheckboxes {
+  color: white;
+}
+
+.MoiveGenre li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+.MoiveGenre li input {
+  width: 10%;
+}
+.MoiveGenre li div {
+  display: inline-block;
+}
+input[type="checkbox"] {
+  accent-color: #f65261;
+}
+
+.dropdown {
+  width: 250px;
+  /* height: 1.5rem; */
+  font-size: 20px;
+
+  background-color: #323232f2;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#options {
+  width: 250px;
+  background-color: #232323;
+  display: none;
+  flex-direction: column;
+  border: 2px solid blue;
+  padding: 5px;
+}
+label {
+  padding: 0.2rem;
+}
+
+.buttonsforSubmit button:disabled {
+  background-color: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
+  cursor: not-allowed;
+}
+.movieDeletePopup {
+  height: 300px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.movieDeletePopup {
+  position: relative;
+}
+.movieDeletePopup h1 {
+  font-size: 44px;
+}
+.movieDeletePopup p {
+  font-size: 18px;
+}
+.confirmButton {
+  position: absolute;
+  right: 20%;
+  top: 60%;
+  margin-top: 10px;
+}
+.confirmButton button {
+  font-size: 20px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background-color: #f65261;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.close {
+  color: #ffffff;
+  font-size: 64px;
+  cursor: pointer;
+}
+.DeleteMovieHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.centerTheText {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.errorFailure {
+  color: #ffffff;
+  font-size: 24px;
+}
+.moveToRight {
+  text-align: right;
+}
+.sucessMessageIcon {
+  font-size: 52px;
+  color: #f65261;
+  text-align: center;
+}
+.sucessData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.sucessData p {
+  font-size: 22px;
+}
+
+.movieDeleteFinalPopup {
+  height: 300px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .formSomeOfFields {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 10px;
+  }
+  .movieForm {
+    margin-top: 0px;
+  }
+  .movieForm input {
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #323232f2;
+    color: #ffffff;
+  }
+  .MovieAddEdit {
+    padding: 20px;
+  }
+  .formScrollBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  textarea {
+    min-height: 50px;
+  }
+  .MovieAddEdit h1 {
+    font-size: 24px;
+  }
+  .close {
+    font-size: 32px;
+  }
+  .buttonsforSubmit button {
+    padding: 7px 22px;
+    font-size: 14px;
+  }
+  /* .movieDropdown {
+    width: 100%;
+  } */
+  .movieForm label {
+    font-size: 14px;
+  }
+}

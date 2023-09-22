@@ -1,0 +1,100 @@
+.Header_Section {
+  width: 130rem;
+  background-color: #232323;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.HeaderIcon {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.HeaderIcon h1 {
+  color: #f65261;
+  font-size: 22px;
+  font-weight: 600;
+}
+.HeaderIcon h1 span {
+  font-weight: normal;
+  color: #f65261;
+}
+
+.searchIcon {
+  font-size: 28px;
+  color: #f65261;
+  cursor: pointer;
+}
+.movieDetails {
+  display: flex;
+  gap: 60px;
+  padding: 0px 40px;
+}
+.MovieImg img {
+  width: 300px;
+  height: 350px;
+}
+.movieDetailsData {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.movieDetailsData h1 {
+  font-size: 46px;
+  text-decoration: none;
+  font-weight: normal;
+}
+.MovieTitleAndAverage {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-content: center;
+}
+.averageVote {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.averageVote p {
+  margin-top: 12px;
+}
+.MovieDetailsGeneres {
+  font-size: 18px;
+}
+.MovieYearAndTime {
+  margin: 10px 0px;
+  font-size: 18px;
+  display: flex;
+  gap: 70px;
+}
+.MovieYearAndTime p {
+  color: #f65261;
+}
+.OverView {
+  font-size: 18px;
+}
+.HeaderIcon a {
+  text-decoration: none;
+}
+.formFeild {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.formFeild input {
+  width: 300px;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px;
+}
