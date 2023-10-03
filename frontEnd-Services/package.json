@@ -5,16 +5,18 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/react": "^13.4.0",
+    "addon-redux": "^2.0.11",
     "cypress-xpath": "^2.0.1",
+    "focus-trap-react": "^10.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropdown-select": "^4.10.0",
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.3.3",
+    "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",
+    "storybook-addon-react-router-v6": "^2.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -30,7 +32,14 @@
       "react-app",
       "react-app/jest",
       "plugin:storybook/recommended"
-    ]
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -60,6 +69,7 @@
     "@types/jest": "^29.5.4",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cypress": "^13.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.13",
     "prop-types": "^15.8.1",
     "storybook": "^7.4.0",

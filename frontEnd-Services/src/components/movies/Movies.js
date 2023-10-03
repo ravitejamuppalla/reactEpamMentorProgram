@@ -4,16 +4,39 @@ import Loader from "../../utils/Loader";
 import MoviesItems from "./MoviesItems";
 import GenercMoviesSelect from "./GenercMoviesSelect";
 import SortControl from "./SortControl";
+import { useHistory, useRouteMatch, useSearchParams } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { movieActions } from "../../store/MovieStore";
 
 function Movies(props) {
+  let dispatch = useDispatch();
   let { error, loading, moviesData, onSelect } = props;
-  const [sortDefault, setDefaultsort] = useState("Release Date");
+
   let movieListSortedList;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const sortDefaultValue = searchParams.get("sortBy")
+    ? searchParams.get("sortBy")
+    : "Release Date";
+
+  const [sortDefault, setDefaultsort] = useState(sortDefaultValue);
 
   function showMoviesDetails() {
     return !error && !loading && moviesData && !(moviesData.length > 0);
   }
   function sortingByHandler(data) {
+    setSearchParams({
+      genre: searchParams.get("genre"),
+      sortBy: data,
+    });
+
+    if (searchParams.get("query"))
+      setSearchParams({
+        genre: searchParams.get("genre"),
+        sortBy: data,
+        query: searchParams.get("query") ? searchParams.get("query") : "null",
+      });
+    dispatch(movieActions.changeSortingValue(data));
     setDefaultsort(data);
   }
 
@@ -30,7 +53,6 @@ function Movies(props) {
       });
     }
   }
-
   return (
     <>
       <div className={classes.MoviesDetails}>

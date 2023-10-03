@@ -4,8 +4,8 @@ import SearchForm from "../components/header/SearchForm";
 import userEvent from "@testing-library/user-event";
 import GenercMoviesSelect from "../components/movies/GenercMoviesSelect";
 
-describe("Counter Test Validation", () => {
-  it("Test that a click event on decrement button decrements the displayed value", async () => {
+describe("Select the Generc Validation", () => {
+  it("Test that a click event on Generc and filter according to Generc Values", async () => {
     const onSelect = jest.fn();
     const sortingByHandler = jest.fn();
 

@@ -4,29 +4,23 @@ import Modal from "../../UI/Modal";
 import useHttp from "../../hooks/useHttp";
 import Loader from "../../utils/Loader";
 import { FcOk } from "react-icons/fc";
+import { useDispatch, useSelector } from "react-redux";
+import { DeleteMovieItem } from "../../store/MovieStore";
 
 function DeleteMovie(props) {
   let { isLoading, iserror: error, sendRequest } = useHttp();
+  let dispatch = useDispatch();
   const [confrimDelete, setConfrimDelete] = useState(true);
+  let movieDetailsData = useSelector((data) => data.MovieStore.movieDetails);
   function closeModelPopup(params) {
     props.closeMovieModel();
   }
-  console.log(props.deleteMovie.movieId);
   function deleteMovieFromList(event) {
     setConfrimDelete(false);
-    let requestconfig;
     async function getProductData() {
-      requestconfig = {
-        url: "http://localhost:4000/movies/" + props.deleteMovie.movieId,
-        // url: "http://localhost:4000/movies/" + "123",
-
-        method: "DELETE",
-      };
-
-      await sendRequest(requestconfig, getMovieResponse);
+      dispatch(DeleteMovieItem(movieDetailsData.id));
     }
 
-    function getMovieResponse(data) {}
     getProductData();
   }
 

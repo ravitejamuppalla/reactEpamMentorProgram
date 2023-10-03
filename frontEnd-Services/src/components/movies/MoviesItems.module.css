@@ -44,16 +44,23 @@
   /* position: relative; */
 }
 .dropdownoptions {
-  width: 100px;
+  width: 150px;
   padding: 5px;
   border-radius: 8px;
   background-color: white;
-  border: 1px solid gray;
-  color: black;
+  color: #ffffff;
   font-size: 18px;
+  text-align: center;
+  background-color: #555555;
 }
 .dropdownoptions li {
-  padding: 5px;
+  padding: 7px;
+}
+.dropdownoptions li:hover {
+  background-color: #f65261;
+}
+.dropdownoptions li::before {
+  background-color: #f65261;
 }
 .dropdownoptions::before {
   content: "";
@@ -66,10 +73,36 @@
   background-color: white;
   border-left: 1px solid gray;
   border-top: 1px solid gray;
+  background-color: #555555;
 }
 .threeDotIcon {
   position: relative;
 }
 .cardForEditAndDelete {
   position: absolute;
+}
+.iconforDelete {
+  position: relative;
+}
+.cardForEditAndDelete {
+  position: absolute;
+  top: 40px;
+  right: -14px;
+  animation: slide-down 500ms ease-out forwards;
+}
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
