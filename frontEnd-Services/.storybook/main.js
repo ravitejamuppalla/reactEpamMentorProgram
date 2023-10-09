@@ -7,7 +7,7 @@ const config = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
-    "storybook-addon-react-router-v6",
+    // "storybook-addon-react-router-v6",
     "addon-redux",
   ],
   framework: {

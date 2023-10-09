@@ -2,21 +2,28 @@ import GenercMoviesSelect from "../components/movies/GenercMoviesSelect";
 import { action } from "@storybook/addon-actions";
 import { Outlet } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
-import {
-  reactRouterOutlet,
-  reactRouterParameters,
-  withRouter,
-} from "storybook-addon-react-router-v6";
+
+import storeDetails from "../store/index";
+// import {
+//   reactRouterOutlet,
+//   reactRouterParameters,
+//   withRouter,
+// } from "storybook-addon-react-router-v6";
+import { Provider } from "react-redux";
 export default {
   title: "Components/GenreSelect",
+  decorators: [(story) => <Provider store={storeDetails}>{story()}</Provider>],
+  // decorators: [
+  //   withRouter,
+  //   (story) => <Provider store={storeDetails}>{story()}</Provider>,
+  // ],
   component: GenercMoviesSelect,
-  decorators: [withRouter],
 
   tags: ["autodocs"],
   parameters: {
-    reactRouter: reactRouterParameters({
-      routing: reactRouterOutlet(<Outlet></Outlet>),
-    }),
+    // reactRouter: reactRouterParameters({
+    //   routing: reactRouterOutlet(<Outlet></Outlet>),
+    // }),
     layout: "centered",
   },
 
